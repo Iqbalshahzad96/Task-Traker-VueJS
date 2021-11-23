@@ -3,11 +3,9 @@
         <h1>{{ title }}</h1>
         <h3>{{ count }}</h3>
         <Button 
-        @btn-click="addTask()"
-        text='Add Task' color='green'/>
-        <Button 
-        @btn-click="deleteTask()"
-        text='Delete Task' color='red'/>
+        @btn-click="$emit('toggle-add-task')"
+        :text="showAddTask ? 'Close' : 'Add Task'"
+        :color="showAddTask ? 'red' : 'green'" />
     </header>
 </template>
 
@@ -18,6 +16,7 @@ export default{
     name: 'Header',
     props: {
         title: String,
+        showAddTask: Boolean,
     },
     data() {
         return {
@@ -30,10 +29,7 @@ export default{
     methods: {
         addTask() {
             this.count += 1
-        },
-        deleteTask() {
-            this.count -= 1
-        },
+        }
     },
 }
 </script>
