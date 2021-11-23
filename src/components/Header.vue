@@ -1,7 +1,6 @@
 <template>
     <header>
         <h1>{{ title }}</h1>
-        <h3>{{ count }}</h3>
         <Button 
         @btn-click="$emit('toggle-add-task')"
         :text="showAddTask ? 'Close' : 'Add Task'"
@@ -18,18 +17,8 @@ export default{
         title: String,
         showAddTask: Boolean,
     },
-    data() {
-        return {
-            count : 0
-        }
-    },
     components: {
         Button,
-    },
-    methods: {
-        addTask() {
-            this.count += 1
-        }
     },
 }
 </script>
