@@ -15,13 +15,13 @@
     {
       "text": "Go to Dentist",
       "day": "November 25th at 3:00pm",
-      "reminder": true,
+      "reminder": false,
       "id": "-EI7aCU"
     },
     {
       "text": "Meeting With Employees",
       "day": "November 24th at 4:00pm",
-      "reminder": false,
+      "reminder": true,
       "id": "huvoKi9"
     }
   ]
